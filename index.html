@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasmin & Joanderson | 11.10.2026</title>
+  <meta name="description" content="Celebre conosco o casamento de Yasmin e Joanderson. 11 de outubro de 2026. Confirme sua presença!">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <span class="monogram">Y</span>
+        <i data-lucide="heart" class="nav-heart"></i>
+        <span class="monogram">J</span>
+      </a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#casal" class="nav-link">O Casal</a></li>
+        <li><a href="#galeria" class="nav-link">Galeria</a></li>
+        <li><a href="#presentes" class="nav-link">Presentes</a></li>
+        <li><a href="#cerimonia" class="nav-link">Cerimônia</a></li>
+        <li><a href="#rsvp" class="nav-link">Presença</a></li>
+      </ul>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <i data-lucide="menu" id="menu-icon"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#inicio" class="nav-mobile-link">Início</a>
+      <a href="#casal" class="nav-mobile-link">O Casal</a>
+      <a href="#galeria" class="nav-mobile-link">Galeria</a>
+      <a href="#presentes" class="nav-mobile-link">Presentes</a>
+      <a href="#cerimonia" class="nav-mobile-link">Cerimônia</a>
+      <a href="#rsvp" class="nav-mobile-link">RSVP</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    
+    <!-- Decorative Circles -->
+    <div class="hero-circle hero-circle-1"></div>
+    <div class="hero-circle hero-circle-2"></div>
+    
+    <div class="hero-content">
+      <!-- Decorative Branch -->
+      <svg class="hero-branch" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M50 35 C30 25, 10 30, 5 20" stroke-linecap="round"/>
+        <path d="M50 35 C70 25, 90 30, 95 20" stroke-linecap="round"/>
+        <path d="M15 22 C12 18, 8 15, 5 12" stroke-linecap="round"/>
+        <path d="M85 22 C88 18, 92 15, 95 12" stroke-linecap="round"/>
+        <circle cx="50" cy="35" r="3" fill="currentColor"/>
+      </svg>
+      
+      <h1 class="hero-title">
+        <span>Yasmin</span>
+        <span class="hero-divider">
+          <span class="hero-line"></span>
+          <i data-lucide="heart" class="hero-heart"></i>
+          <span class="hero-line"></span>
+        </span>
+        <span>Joanderson</span>
+      </h1>
+      
+      <p class="hero-date">11 • 10 • 2026</p>
+      
+      <a href="#rsvp" class="btn btn-primary hero-btn">
+        Confirmar Presença
+        <i data-lucide="heart"></i>
+      </a>
+    </div>
+    
+    <div class="hero-scroll">
+      <i data-lucide="chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Countdown Section -->
+  <section class="countdown">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Contagem Regressiva</p>
+        <h2 class="section-title">Falta pouco para o grande dia</h2>
+        <div class="decorative-line"></div>
+      </div>
+      
+      <div class="countdown-grid">
+        <div class="countdown-box">
+          <span class="countdown-number" id="days">000</span>
+          <span class="countdown-label">Dias</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="hours">00</span>
+          <span class="countdown-label">Horas</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="minutes">00</span>
+          <span class="countdown-label">Minutos</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="seconds">00</span>
+          <span class="countdown-label">Segundos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Couple Photo Section -->
+  <section class="couple-photo">
+    <div class="container">
+      <div class="couple-photo-wrapper">
+        <div class="couple-photo-frame couple-photo-frame-top"></div>
+        <div class="couple-photo-frame couple-photo-frame-bottom"></div>
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" alt="Yasmin e Joanderson" class="couple-photo-img">
+        <div class="couple-photo-overlay"></div>
+        <p class="couple-photo-caption">"O amor é a nossa história favorita"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Messages Section -->
+  <section id="casal" class="messages">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Mensagens dos Noivos</p>
+        <h2 class="section-title">Palavras do Coração</h2>
+        <div class="decorative-line"></div>
+      </div>
+      
+      <div class="messages-grid">
+        <!-- Groom Message -->
+        <div class="message-card">
+          <div class="message-photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Joanderson" class="message-photo">
+            <div class="message-quote-icon">
+              <i data-lucide="quote"></i>
+            </div>
+          </div>
+          <h3 class="message-name">Joanderson</h3>
+          <p class="message-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus ullam facilis officia fugit minima blanditiis cupiditate incidunt? Repellendus quae numquam saepe, assumenda ad quo sit eos laborum! Dolorem, consequatur?
+          </p>
+        </div>
+        
+        <!-- Bride Message -->
+        <div class="message-card message-card-offset">
+          <div class="message-photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Yasmin" class="message-photo">
+            <div class="message-quote-icon">
+              <i data-lucide="quote"></i>
+            </div>
+          </div>
+          <h3 class="message-name">Yasmin</h3>
+          <p class="message-text">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta modi delectus saepe quis atque molestiae iste earum excepturi, similique ratione ipsam officiis libero magnam, eum reprehenderit repellat debitis assumenda ipsa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="galeria" class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Nossa História em Imagens</p>
+        <h2 class="section-title">Galeria do Casal</h2>
+        <div class="decorative-line"></div>
+      </div>
+    </div>
+    
+    <div class="gallery-scroll">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=600&q=80" alt="Foto 1">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80" alt="Foto 2">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Foto 3">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" alt="Foto 4">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80" alt="Foto 5">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&q=80" alt="Foto 6">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=600&q=80" alt="Foto 7">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80" alt="Foto 8">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift List Section -->
+  <section id="presentes" class="gifts">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Lista de Presentes</p>
+        <h2 class="section-title">Sua Presença é o Nosso Maior Presente</h2>
+        <div class="decorative-line"></div>
+        <p class="section-description">
+          Mas se desejar nos presentear, aqui estão algumas sugestões para nos ajudar
+          a começar nossa vida a dois.
+        </p>
+      </div>
+      
+      <div class="gifts-grid">
+        
+        
+        <div class="gift-card">
+          <div class="gift-icon">
+            <i data-lucide="heart"></i>
+          </div>
+          <h3 class="gift-title">Lua de Mel</h3>
+          <p class="gift-description">Contribua com nossa viagem</p>
+          <a href="#" class="gift-link">
+            Ver itens
+            <i data-lucide="external-link"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dress Code Section -->
+  <section class="dresscode">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Dress Code</p>
+        <h2 class="section-title">Traje Sugerido</h2>
+        <div class="decorative-line"></div>
+      </div>
+      
+      <div class="dresscode-card">
+        <h3 class="dresscode-title">Traje Esporte Fino</h3>
+        <p class="dresscode-text">
+          Pedimos gentilmente que os convidados se sintam confortáveis com as vestimentas.
+          <br><br>
+          <strong>Homens:</strong> Terno ou blazer com calça social.
+          <br>
+          <strong>Mulheres:</strong> Vestidos elegantes ou conjuntos sofisticados.
+          <br><br>
+          <span class="dresscode-warning">Por favor, evitem usar branco</span> — esta cor é reservada para a noiva.
+        </p>
+        
+       
+    </div>
+  </section>
+
+  <!-- Venue Section -->
+  <section id="cerimonia" class="venues">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Local</p>
+        <h2 class="section-title">Onde Celebraremos</h2>
+        <div class="decorative-line"></div>
+      </div>
+      
+      <div class="venues-grid">
+        <!-- Ceremony -->
+        <div class="venue-card">
+          <div class="venue-image">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80" alt="Local da Cerimônia">
+            <div class="venue-image-overlay"></div>
+            <div class="venue-image-text">
+              <span class="venue-type">Cerimônia</span>
+              <h3 class="venue-name">Igreja Matriz</h3>
+            </div>
+          </div>
+          <div class="venue-details">
+            <div class="venue-info">
+              <i data-lucide="map-pin"></i>
+              <p>Rua Principal, 100 - Centro, Cidade - Estado</p>
+            </div>
+            <div class="venue-info">
+              <i data-lucide="clock"></i>
+              <p>Horário: <strong>16:00</strong></p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">
+              <i data-lucide="map-pin"></i>
+              Ver no Mapa
+              <i data-lucide="external-link"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Reception -->
+        <div class="venue-card">
+          <div class="venue-image">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80" alt="Local da Festa">
+            <div class="venue-image-overlay"></div>
+            <div class="venue-image-text">
+              <span class="venue-type">Festa</span>
+              <h3 class="venue-name">Espaço Jardins</h3>
+            </div>
+          </div>
+          <div class="venue-details">
+            <div class="venue-info">
+              <i data-lucide="map-pin"></i>
+              <p>Av. das Flores, 500 - Jardim Botânico, Cidade - Estado</p>
+            </div>
+            <div class="venue-info">
+              <i data-lucide="clock"></i>
+              <p>Horário: <strong>19:00</strong></p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">
+              <i data-lucide="map-pin"></i>
+              Ver no Mapa
+              <i data-lucide="external-link"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Section -->
+  <section id="rsvp" class="rsvp">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Presença</p>
+        <h2 class="section-title">Confirme Sua Presença</h2>
+        <div class="decorative-line"></div>
+        <p class="section-description">
+          Por favor, confirme sua presença até <strong>11 de setembro de 2026</strong>
+        </p>
+      </div>
+      
+      <div class="rsvp-form-wrapper">
+        <form id="rsvp-form" class="rsvp-form">
+          <div class="form-group">
+            <label for="name">Nome Completo *</label>
+            <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+          </div>
+          
+          <div class="form-group">
+            <label for="guests">Número de Convidados *</label>
+            <select id="guests" name="guests" required>
+              <option value="1">1 pessoa</option>
+              <option value="2">2 pessoas</option>
+              <option value="3">3 pessoas</option>
+              <option value="4">4 pessoas</option>
+              <option value="5">5+ pessoas</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">WhatsApp / Telefone *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Mensagem (opcional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Deixe uma mensagem para os noivos..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-full">
+            <i data-lucide="send"></i>
+            Confirmar Presença
+          </button>
+        </form>
+        
+        <!-- Success Message -->
+        <div id="rsvp-success" class="rsvp-success" style="display: none;">
+          <div class="rsvp-success-icon">
+            <i data-lucide="check-circle"></i>
+          </div>
+          <h2 class="rsvp-success-title">Presença Confirmada!</h2>
+          <p class="rsvp-success-text">
+            Obrigado, <span id="confirmed-name"></span>!
+            <br>
+            Estamos muito felizes em saber que você estará conosco neste dia tão especial.
+            <br><br>
+            Mal podemos esperar para celebrar com você!
+          </p>
+          <div class="rsvp-success-footer">
+            <i data-lucide="heart"></i>
+            <span>Yasmin & Joanderson</span>
+            <i data-lucide="heart"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-monogram">
+        <span>Y</span>
+        <i data-lucide="heart"></i>
+        <span>J</span>
+      </div>
+      <p class="footer-date">11 de Outubro de 2026</p>
+      <p class="footer-text">Estamos muito felizes em celebrar esse momento especial com você.</p>
+      <div class="decorative-line"></div>
+      <p class="footer-credit">
+        Feito com <i data-lucide="heart"></i> para Yasmin & Joanderson
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating Button -->
+  <a href="#rsvp" class="floating-btn">
+    <i data-lucide="heart"></i>
+    <span>Confirmar Presença</span>
+  </a>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i data-lucide="check-circle"></i>
+    <span id="toast-message">Presença confirmada!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
