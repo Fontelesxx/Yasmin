@@ -762,6 +762,7 @@ ul {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-romantic);
   padding: 1.5rem;
+  height: 50vh ;
 }
 
 @media (min-width: 640px) {
@@ -770,11 +771,7 @@ ul {
   }
 }
 
-@media (min-width: 768px) {
-  .message-card-offset {
-    margin-top: 3rem;
-  }
-}
+
 
 .message-photo-wrapper {
   position: relative;
@@ -926,21 +923,10 @@ ul {
   }
 }
 
-.gifts-grid {
-  display: grid;
-  gap: 1.5rem;
-}
 
-@media (min-width: 640px) {
-  .gifts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .gifts-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+#central_gift{
+    display: flex;
+    justify-content: center;
 }
 
 .gift-card {
