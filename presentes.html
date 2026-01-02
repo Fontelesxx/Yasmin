@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes | Yasmin & Joanderson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <style>
+        :root {
+            --primary: #556B2F;
+            --primary-light: #6B8E3F;
+            --primary-dark: #3D4F22;
+            --primary-foreground: #FFFFFF;
+            --background: #FFFFFF;
+            --foreground: #2D3319;
+            --secondary: #F2F2F2;
+            --muted: #F2F2F2;
+            --muted-foreground: #737373;
+            --border: #E0E0E0;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Montserrat', system-ui, sans-serif;
+            --shadow-romantic: 0 10px 40px -15px rgba(85, 107, 47, 0.15);
+            --radius-lg: 1rem;
+            --radius-full: 9999px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--foreground);
+            background-color: var(--background);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .section-subtitle {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--muted-foreground);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--foreground);
+            margin-bottom: 1rem;
+        }
+
+        .decorative-line {
+            width: 6rem;
+            height: 1px;
+            background-color: rgba(85, 107, 47, 0.3);
+            margin: 1.5rem auto;
+        }
+
+        .gift-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .gift-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-romantic);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.12);
+        }
+
+        .gift-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gift-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .gift-name {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--foreground);
+        }
+
+
+        .gift-price {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-presentear {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.875rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-presentear:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        .btn-presentear:disabled {
+            background-color: var(--muted-foreground);
+            cursor: not-allowed;
+        }
+
+        /* Loading Overlay */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            backdrop-filter: blur(4px);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--muted);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .section-title { font-size: 2.25rem; }
+            body { padding-top: 40px; }
+        }
+
+        #voltar{
+            text-decoration: none;
+            color: #3D4F22;
+            transition: var(--transition)
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container">
+        <div >
+            <a href="index.html" id="voltar">Voltar</a>
+        </div>
+        <header>
+            <span class="section-subtitle">Presentes</span>
+            <h1 class="section-title">Lista de Presentes</h1>
+            <div class="decorative-line"></div>
+            <p>Sua presença é o nosso maior presente, mas se desejar nos presentear, aqui estão algumas sugestões.</p>
+        </header>
+
+        <div class="gift-grid" id="gift-list">
+            <!-- Presentes serão inseridos aqui via JS -->
+        </div>
+    </div>
+
+    <script>
+        // CONFIGURAÇÕES DO MERCADO PAGO
+        const MP_PUBLIC_KEY = 'APP_USR-879f7ba1-cc71-4381-b4c5-16c462fe85c2';
+        const MP_ACCESS_TOKEN = 'APP_USR-507292126518693-010218-834ac40d5b99a9e13d50ef173ff230be-267008272'; // Nota: Em uma solução real sem backend, usaremos a API de Preferências via Fetch.
+        
+        // MODO SANDBOX (true para testes, false para produção)
+        const IS_SANDBOX = true;
+
+        // LISTA DE PRESENTES
+        const gifts = [
+            {
+                id: 'gift-1',
+                name: 'Aventura tirolesa',
+                price: 200.00,
+                image: ''
+            },
+            {
+                id: 'gift-2',
+                name: 'Passeio de barco',
+                price: 275.00,
+                image: ''
+            },
+            {
+                id: 'gift-3',
+                name: 'Passeio no parque',
+                price: 70.00,
+                image: ''
+            },
+            {
+                id: 'gift-4',
+                name: 'Jantar em restaurante',
+                price: 230.00,
+                image: ''
+            },
+            {
+                id: 'gift-5',
+                name: 'Mergulhar com os peixes',
+                price: 150.00,
+                image: ''
+            },
+            {
+                id: 'gift-6',
+                name: 'Aluguel de carro',
+                price: 500.00,
+                image: ''
+            },
+            {
+                id: 'gift-7',
+                name: 'Passeio de bug',
+                price: 315.00,
+                image: ''
+            },
+            {
+                id: 'gift-8',
+                name: 'Sessão de massagem para o casal',
+                price: 400.00,
+                image: ''
+            },
+            {
+                id: 'gift-9',
+                name: 'Vaquinha',
+                price: 110.00,
+                image: ''
+            },
+            {
+                id: 'gift-10',
+                name: 'Andar de bicicleta na areia',
+                price: 70.00,
+                image: ''
+            },
+            {
+                id: 'gift-11',
+                name: 'City tour para o casal',
+                price: 170.00,
+                image: ''
+            },
+            {
+                id: 'gift-12',
+                name: 'Parque aquático',
+                price: 242.00,
+                image: ''
+            },
+            {
+                id: 'gift-13',
+                name: 'Passeio de kaiak',
+                price: 340.00,
+                image: ''
+            },
+            {
+                id: 'gift-14',
+                name: 'Passeio de lancha',
+                price: 660.00,
+                image: ''
+            },
+            {
+                id: 'gift-15',
+                name: 'Ensaio fotográfico',
+                price: 1300.00,
+                image: ''
+            },
+            {
+                id: 'gift-16',
+                name: 'Compras a feirinha',
+                price: 80.00,
+                image: ''
+            }
+        ];
+
+        // Renderizar presentes
+        const giftListContainer = document.getElementById('gift-list');
+        const loadingOverlay = document.getElementById('loading-overlay');
+
+        function renderGifts() {
+            giftListContainer.innerHTML = gifts.map(gift => `
+                <div class="gift-card">
+                    <img src="${gift.image}" alt="${gift.name}" class="gift-image">
+                    <div class="gift-content">
+                        <h3 class="gift-name">${gift.name}</h3>
+                        <div class="gift-price">R$ ${gift.price.toFixed(2).replace('.', ',')}</div>
+                        <button class="btn-presentear" onclick="handlePayment('${gift.id}')">Presentear</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function handlePayment(giftId) {
+            const gift = gifts.find(g => g.id === giftId);
+            if (!gift) return;
+
+            
+
+            loadingOverlay.style.display = 'flex';
+
+            try {
+                // Criar preferência de pagamento via API do Mercado Pago
+                // Como estamos no GitHub Pages (sem backend), usaremos a API REST diretamente.
+                // IMPORTANTE: Em produção, o ideal é ter um backend para não expor o Access Token.
+                // Para este caso de uso específico (site estático), seguiremos a solicitação do usuário.
+                
+                const preference = {
+                    items: [
+                        {
+                            title: `Presente: ${gift.name}`,
+                            unit_price: gift.price,
+                            quantity: 1,
+                            currency_id: 'BRL'
+                        }
+                    ],
+                    back_urls: {
+                        success: window.location.origin + window.location.pathname.replace('presentes.html', 'obrigado.html'),
+                        failure: window.location.href,
+                        pending: window.location.href
+                    },
+                    auto_return: 'approved',
+                    payment_methods: {
+                        excluded_payment_types: [],
+                        installments: 12
+                    }
+                };
+
+                const response = await fetch('https://api.mercadopago.com/checkout/preferences', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${MP_ACCESS_TOKEN}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(preference)
+                });
+
+                const data = await response.json();
+
+                if (data.init_point) {
+                    // Redirecionar para o Checkout Pro
+                    window.location.href = IS_SANDBOX ? data.sandbox_init_point : data.init_point;
+                } else {
+                    throw new Error('Erro ao criar preferência de pagamento');
+                }
+
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Ocorreu um erro ao processar o pagamento. Tente novamente mais tarde.');
+            } finally {
+                loadingOverlay.style.display = 'none';
+            }
+        }
+
+        // Inicializar
+        renderGifts();
+    </script>
+</body>
+</html>

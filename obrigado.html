@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! | Yasmin & Joanderson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #556B2F;
+            --foreground: #2D3319;
+            --muted-foreground: #737373;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Montserrat', system-ui, sans-serif;
+            --radius-full: 9999px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--foreground);
+            background-color: #FFFFFF;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .content {
+            max-width: 600px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .heart-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.875rem;
+        }
+
+        .btn-back:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(85, 107, 47, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="heart-icon">♥</div>
+        <h1>Muito Obrigado!</h1>
+        <p>Seu presente foi recebido com muito carinho. Ele nos ajudará muito a construir nossa nova vida juntos.</p>
+        <a href="index.html" class="btn-back">Voltar para o site</a>
+    </div>
+</body>
+</html>

@@ -224,25 +224,30 @@ function showToast(message) {
 // PHONE INPUT MASK
 // ========================================
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const phoneInput = document.getElementById('phone');
-  
-  if (phoneInput) {
-    phoneInput.addEventListener('input', function(e) {
-      let value = e.target.value.replace(/\D/g, '');
-      
-      if (value.length <= 11) {
-        if (value.length > 2) {
-          value = '(' + value.substring(0, 2) + ') ' + value.substring(2);
-        }
-        if (value.length > 10) {
-          value = value.substring(0, 10) + '-' + value.substring(10);
-        }
-      }
-      
-      e.target.value = value;
-    });
-  }
+
+  phoneInput.addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+
+    // LIMITA A 11 DÍGITOS
+    if (value.length > 11) {
+      value = value.substring(0, 11);
+    }
+
+    // FORMATAÇÃO
+    if (value.length > 10) {
+      value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+    } else if (value.length > 6) {
+      value = value.replace(/^(\d{2})(\d{4})(\d+)/, '($1) $2-$3');
+    } else if (value.length > 2) {
+      value = value.replace(/^(\d{2})(\d+)/, '($1) $2');
+    } else if (value.length > 0) {
+      value = value.replace(/^(\d*)/, '($1');
+    }
+
+    e.target.value = value;
+  });
 });
 
 // ========================================

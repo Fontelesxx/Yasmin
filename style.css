@@ -5,9 +5,9 @@
 /* CSS Variables */
 :root {
   /* Colors - Olive Green, White, Gray */
-  --primary: #556B2F;
-  --primary-light: #6B8E3F;
-  --primary-dark: #3D4F22;
+  --primary: #8ba469;
+  --primary-light: #8ba469;
+  --primary-dark: #8ba469;
   --primary-foreground: #FFFFFF;
   
   --background: #FFFFFF;
@@ -189,7 +189,7 @@ ul {
 }
 
 .btn-primary {
-  background-color: var(--primary);
+  background-color: var(--primary   );
   color: var(--primary-foreground);
 }
 
@@ -756,7 +756,7 @@ ul {
 }
 
 .message-card {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #8ba469;
   backdrop-filter: blur(8px);
   border: 1px solid rgba(224, 224, 224, 0.5);
   border-radius: var(--radius-xl);
@@ -800,7 +800,7 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--primary);
-  color: var(--primary-foreground);
+  color:#ffffff;
   padding: 0.5rem;
   border-radius: 50%;
 }
@@ -813,13 +813,13 @@ ul {
 .message-name {
   font-size: 1.5rem;
   text-align: center;
-  color: var(--primary);
+  color:white;
   margin-bottom: 1rem;
 }
 
 .message-text {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: rgb(255, 255, 255);
   text-align: center;
   font-style: italic;
   line-height: 1.8;
@@ -1007,6 +1007,7 @@ ul {
   padding: 5rem 0;
 }
 
+
 @media (min-width: 640px) {
   .dresscode {
     padding: 7rem 0;
@@ -1016,7 +1017,7 @@ ul {
 .dresscode-card {
   max-width: 48rem;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #8ba469;
   backdrop-filter: blur(8px);
   border: 1px solid rgba(224, 224, 224, 0.5);
   border-radius: var(--radius-xl);
@@ -1033,13 +1034,13 @@ ul {
 
 .dresscode-title {
   font-size: 1.5rem;
-  color: var(--foreground);
+  color: white;
   margin-bottom: 1rem;
 }
 
 .dresscode-text {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: white;
   line-height: 1.8;
   margin-bottom: 2rem;
 }
@@ -1049,7 +1050,7 @@ ul {
 }
 
 .dresscode-warning {
-  color: var(--primary);
+  color: rgb(2, 2, 2);
   font-weight: 500;
 }
 
@@ -1434,7 +1435,7 @@ ul {
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 1.5rem;
-  background-color: var(--primary);
+  background-color: var(--primary-light);
   color: var(--primary-foreground);
   border-radius: var(--radius-full);
   box-shadow: 0 4px 20px rgba(85, 107, 47, 0.3);
