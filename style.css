@@ -236,11 +236,13 @@ ul {
 }
 
 .nav.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(161, 161, 161, 0.233);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-soft);
   padding: 0.75rem 0;
 }
+
+
 
 .nav-container {
   max-width: 1200px;
@@ -291,12 +293,13 @@ ul {
 .nav-link {
   position: relative;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(45, 51, 25, 0.8);
+  color: var(--primary);
   padding: 0.5rem 0;
   transition: var(--transition);
+
 }
 
 .nav-link::after {
@@ -402,19 +405,19 @@ ul {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80') center/cover no-repeat;
+  background: url('img/WhatsApp Image 2026-02-05 at 15.00.21 (2).jpeg') center/cover no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(41, 40, 40, 0.6);
   backdrop-filter: blur(2px);
 }
 
 .hero-circle {
   position: absolute;
-  border: 1px solid rgba(85, 107, 47, 0.1);
+  border: 1px solid rgba(175, 255, 182, 0.281);
   border-radius: 50%;
   animation: float 3s ease-in-out infinite;
   opacity: 0.5;
@@ -455,7 +458,7 @@ ul {
   font-size: 3rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  color: var(--foreground);
+  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 640px) {
@@ -487,7 +490,7 @@ ul {
 .hero-line {
   width: 3rem;
   height: 1px;
-  background-color: rgba(85, 107, 47, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (min-width: 640px) {
@@ -499,8 +502,8 @@ ul {
 .hero-heart {
   width: 1.25rem;
   height: 1.25rem;
-  color: var(--primary);
-  fill: rgba(85, 107, 47, 0.3);
+  color: white;
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 640px) {
@@ -513,7 +516,7 @@ ul {
 .hero-date {
   font-size: 1.125rem;
   letter-spacing: 0.3em;
-  color: var(--muted-foreground);
+  color: white;
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
@@ -762,6 +765,7 @@ ul {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-romantic);
   padding: 1.5rem;
+  
 }
 
 @media (min-width: 640px) {
@@ -779,7 +783,7 @@ ul {
 
 .message-photo {
   width: 8rem;
-  height: 8rem;
+
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto;
@@ -807,14 +811,13 @@ ul {
 
 .message-quote-icon svg {
   width: 1rem;
-  height: 1rem;
 }
 
 .message-name {
   font-size: 1.5rem;
   text-align: center;
   color:white;
-  margin-bottom: 1rem;
+
 }
 
 .message-text {
@@ -823,7 +826,9 @@ ul {
   text-align: center;
   font-style: italic;
   line-height: 1.8;
-  padding-bottom: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ========================================

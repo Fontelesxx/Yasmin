@@ -141,7 +141,7 @@ function initScrollEffects() {
   animatedElements.forEach(function (element) {
     element.style.opacity = '0';
     element.style.transform = 'translateY(30px)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    element.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out';
     observer.observe(element);
   });
 
