@@ -402,6 +402,8 @@ ul {
   overflow: hidden;
 }
 
+
+
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -444,7 +446,7 @@ ul {
   text-align: center;
   padding: 1rem;
   max-width: 56rem;
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 4s ease forwards;
 }
 
 .hero-branch {
@@ -776,27 +778,6 @@ ul {
 
 
 
-.message-photo-wrapper {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.message-photo {
-  width: 8rem;
-
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto;
-  border: 4px solid rgba(85, 107, 47, 0.2);
-  box-shadow: var(--shadow-romantic);
-}
-
-@media (min-width: 640px) {
-  .message-photo {
-    width: 10rem;
-    height: 10rem;
-  }
-}
 
 .message-quote-icon {
   position: absolute;
@@ -817,7 +798,7 @@ ul {
   font-size: 1.5rem;
   text-align: center;
   color:white;
-
+  margin-bottom: 1rem;
 }
 
 .message-text {
@@ -917,91 +898,96 @@ ul {
    GIFTS SECTION
    ======================================== */
 
-.gifts {
-  padding: 5rem 0;
-  background-color: rgba(242, 242, 242, 0.3);
-}
+/* ===== SEÇÃO PRESENTES ===== */
 
-@media (min-width: 640px) {
-  .gifts {
-    padding: 7rem 0;
-  }
-}
-
-
-#central_gift{
-    display: flex;
-    justify-content: center;
-}
-
-.gift-card {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(224, 224, 224, 0.5);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-romantic);
-  padding: 1.5rem;
-  text-align: center;
-  transition: var(--transition);
-  width: 40%;
-}
-
-.gift-card:hover {
-  box-shadow: var(--shadow-elevated);
-  transform: translateY(-0.25rem);
-}
-
-.gift-icon {
-  width: 4rem;
-  height: 4rem;
-  margin: 0 auto 1rem;
-  background-color: rgba(85, 107, 47, 0.1);
-  border-radius: 50%;
+.presentes-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gift-icon svg {
-  width: 2rem;
-  height: 2rem;
-  color: var(--primary);
-}
-
-.gift-title {
-  font-size: 1.25rem;
-  color: var(--foreground);
-  margin-bottom: 0.5rem;
-}
-
-.gift-description {
-  font-size: 0.875rem;
-  color: var(--muted-foreground);
-  margin-bottom: 1rem;
-}
-
-.gift-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--primary);
-  transition: var(--transition);
-}
-
-.gift-link:hover {
-  text-decoration: underline;
-}
-
-.gift-link svg {
-  width: 1rem;
-  height: 1rem;
-}
-
-.gifts-cta {
   text-align: center;
-  margin-top: 3rem;
+  overflow: hidden;
+  background-image: url(img/fundo.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 150vh;
+  align-items: center;
+  
+}
+
+
+/* overlay suave opcional */
+.presentes-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.presentes-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* iniciais */
+.presentes-iniciais {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: #7d8f5c;
+  letter-spacing: 6px;
+  z-index: 1;
+}
+
+/* título */
+.presentes-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4vw, 42px);
+  color: #3f4b2f;
+  font-weight: 500;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+/* divisor */
+.presentes-divider {
+  width: 80px;
+  height: 1px;
+
+  margin: 20px auto 26px;
+}
+
+/* texto */
+.presentes-text {
+  font-family: 'Montserrat', sans-serif;
+  color: #5f5f5f;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* botão */
+.presentes-button {
+  display: inline-block;
+  padding: 14px 34px;
+  border: 1.5px solid #6f8b4e;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #6f8b4e;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all .35s ease;
+  background: rgba(255,255,255,0.7);
+}
+
+.presentes-button:hover {
+  background: #6f8b4e;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 /* ========================================

@@ -137,11 +137,11 @@ function initScrollEffects() {
   }, observerOptions);
 
   // Observe elements with animation classes
-  const animatedElements = document.querySelectorAll('.message-card, .gift-card, .venue-card, .countdown-box');
+  const animatedElements = document.querySelectorAll('.message-card, .gift-card, .venue-card, .countdown-box, .presentes-section');
   animatedElements.forEach(function (element) {
     element.style.opacity = '0';
     element.style.transform = 'translateY(30px)';
-    element.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out';
+    element.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
     observer.observe(element);
   });
 
