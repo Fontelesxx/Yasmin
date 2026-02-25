@@ -909,7 +909,7 @@ ul {
   background-position: center;
   height: 150vh;
   align-items: center;
-  
+  animation: fadeInUp 4s ease forwards;
 }
 
 

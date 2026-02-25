@@ -137,7 +137,7 @@ function initScrollEffects() {
   }, observerOptions);
 
   // Observe elements with animation classes
-  const animatedElements = document.querySelectorAll('.message-card, .gift-card, .venue-card, .countdown-box, .presentes-section');
+  const animatedElements = document.querySelectorAll('.message-card, .gift-card, .venue-card, .countdown-box');
   animatedElements.forEach(function (element) {
     element.style.opacity = '0';
     element.style.transform = 'translateY(30px)';
