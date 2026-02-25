@@ -930,19 +930,19 @@ ul {
   max-width: 600px;
   margin: 0 auto;
   z-index: 1;
+ 
 }
 
 /* iniciais */
 .presentes-iniciais {
-  position: absolute;
-  top: 40px;
-  left: 50%;
   transform: translateX(-50%);
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   color: #7d8f5c;
-  letter-spacing: 6px;
   z-index: 1;
+  position: absolute;
+  left: 50%;
+  margin-bottom: 2vh;
 }
 
 /* título */
