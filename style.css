@@ -912,7 +912,11 @@ ul {
   animation: fadeInUp 4s ease forwards;
 }
 
-
+@media(max-width: 640px) {
+  .presentes-section {
+    height: 50vh;
+  }
+}
 /* overlay suave opcional */
 .presentes-section::before {
   content: "";
