@@ -942,7 +942,7 @@ ul {
   z-index: 1;
   position: absolute;
   left: 50%;
-  margin-bottom: 2vh;
+  
 }
 
 /* título */
@@ -953,6 +953,7 @@ ul {
   font-weight: 500;
   margin-bottom: 18px;
   line-height: 1.2;
+  margin-top: 10vh;
 }
 
 /* divisor */
