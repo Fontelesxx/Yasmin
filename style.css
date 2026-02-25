@@ -943,6 +943,7 @@ ul {
   position: absolute;
   left: 50%;
   
+  
 }
 
 /* título */
@@ -953,7 +954,7 @@ ul {
   font-weight: 500;
   margin-bottom: 18px;
   line-height: 1.2;
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 
 /* divisor */
