@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmin & Joanderson | 11.10.2026</title>
+    <meta name="description"
+        content="Celebre conosco o casamento de Yasmin e Joanderson. 11 de outubro de 2026. Confirme sua presença!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="shortcut icon" href="img/favicon.jpeg" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <span class="monogram">Y</span>
+                <i data-lucide="heart" class="nav-heart"></i>
+                <span class="monogram">J</span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#casal" class="nav-link">O Casal</a></li>
+                <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                <li><a href="#central" class="nav-link">Presentes</a></li>
+                <li><a href="#cerimonia" class="nav-link">Cerimônia</a></li>
+                <li><a href="#rsvp" class="nav-link">Presença</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="nav-mobile" id="nav-mobile">
+            <a href="#inicio" class="nav-mobile-link">Início</a>
+            <a href="#casal" class="nav-mobile-link">O Casal</a>
+            <a href="#galeria" class="nav-mobile-link">Galeria</a>
+            <a href="#central" class="nav-mobile-link">Presentes</a>
+            <a href="#cerimonia" class="nav-mobile-link">Cerimônia</a>
+            <a href="#rsvp" class="nav-mobile-link">Presença</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <!-- Decorative Circles -->
+
+        <div class="hero-circle hero-circle-2"></div>
+
+        <div class="hero-content">
+            <!-- Decorative Branch -->
+            <svg class="hero-branch" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M50 35 C30 25, 10 30, 5 20" stroke-linecap="round" />
+                <path d="M50 35 C70 25, 90 30, 95 20" stroke-linecap="round" />
+                <path d="M15 22 C12 18, 8 15, 5 12" stroke-linecap="round" />
+                <path d="M85 22 C88 18, 92 15, 95 12" stroke-linecap="round" />
+                <circle cx="50" cy="35" r="3" fill="currentColor" />
+            </svg>
+
+            <h1 class="hero-title">
+                <span>Yasmin</span>
+                <span class="hero-divider">
+                    <span class="hero-line"></span>
+                    <i data-lucide="heart" class="hero-heart"></i>
+                    <span class="hero-line"></span>
+                </span>
+                <span>Joanderson</span>
+            </h1>
+
+            <p class="hero-date">11 • Outubro • 2026</p>
+
+            <a href="#rsvp" class="btn btn-primary hero-btn">
+                Confirmar Presença
+                <i data-lucide="heart"></i>
+            </a>
+        </div>
+
+        <div class="hero-scroll">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Contagem Regressiva</p>
+                <h2 class="section-title">Falta pouco para o grande dia</h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="countdown-grid">
+                <div class="countdown-box">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">Dias</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couple Photo Section -->
+    <section class="couple-photo">
+        <div class="container">
+            <div class="couple-photo-wrapper">
+                <div class="couple-photo-frame couple-photo-frame-top"></div>
+                <div class="couple-photo-frame couple-photo-frame-bottom"></div>
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.21 (2).jpeg" alt="Yasmin e Joanderson"
+                    class="couple-photo-img">
+                <div class="couple-photo-overlay"></div>
+                <p class="couple-photo-caption">"O amor é a nossa história favorita"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section id="casal" class="messages">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Mensagens dos Noivos</p>
+                <h2 class="section-title">Palavras do Coração</h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="messages-grid">
+                <!-- Groom Message -->
+                <div class="message-card">
+
+                    <h3 class="message-name">Joanderson</h3>
+                    <p class="message-text">
+                        Hoje celebramos um sonho que nasceu do amor e se fortaleceu a cada dia. Ter vocês aqui aquece
+                        nosso coração e torna esse momento ainda mais especial. Obrigado por fazerem parte da nossa
+                        história e desse começo tão importante para nós.
+                    </p>
+                </div>
+
+                <!-- Bride Message -->
+                <div class="message-card">
+
+                    <h3 class="message-name">Yasmin</h3>
+                    <p class="message-text">
+                        Meu coração transborda de gratidão. Cada sorriso, cada abraço e cada presença aqui tornam esse
+                        dia ainda mais especial. Obrigada por caminharem conosco, por torcerem por nós e por fazerem
+                        parte desse novo começo tão cheio de amor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Nossa História em Imagens</p>
+                <h2 class="section-title">Galeria do Casal</h2>
+                <div class="decorative-line"></div>
+            </div>
+        </div>
+
+        <div class="gallery-scroll">
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.20.jpeg" alt="Foto 1">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.21 (1).jpeg" alt="Foto 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.21 (2).jpeg" alt="Foto 3">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.21 (3).jpeg" alt="Foto 4">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.21 (4).jpeg" alt="Foto 5">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.21 (5).jpeg" alt="Foto 6">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.21.jpeg" alt="Foto 7">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.22 (1).jpeg" alt="Foto 8">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.22 (2).jpeg" alt="Foto 9">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.22 (3).jpeg" alt="Foto 10">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.22 (4).jpeg" alt="Foto 11">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.22 (5).jpeg" alt="Foto 12">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.22.jpeg" alt="Foto 13">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.23 (1).jpeg" alt="Foto 14">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.23 (2).jpeg" alt="Foto 15">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.23.jpeg" alt="Foto 16">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.24 (1).jpeg" alt="Foto 17">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.24 (2).jpeg" alt="Foto 18">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.24 (3).jpeg" alt="Foto 19">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.24 (4).jpeg" alt="Foto 20">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.24.jpeg" alt="Foto 21">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.25 (1).jpeg" alt="Foto 22">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.25 (2).jpeg" alt="Foto 23">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.25 (3).jpeg" alt="Foto 24">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-05 at 15.00.25.jpeg" alt="Foto 25">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-19 at 13.49.04 (1).jpeg" alt="Foto 26">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-19 at 13.49.04 (2).jpeg" alt="Foto 27">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-19 at 13.49.04.jpeg" alt="Foto 28">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-19 at 13.49.05 (1).jpeg" alt="Foto 29">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-19 at 13.49.05 (2).jpeg" alt="Foto 30">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-19 at 13.49.05 (3).jpeg" alt="Foto 31">
+            </div>
+            <div class="gallery-item">
+                <img src="img/WhatsApp Image 2026-02-19 at 13.49.05.jpeg" alt="Foto 32">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ft1.jpeg" alt="Foto 33">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ft2.jpeg" alt="Foto 34">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ft3.jpeg" alt="Foto 35">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ft4.jpeg" alt="Foto 36">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ft5.jpeg" alt="Foto 37">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift List Section -->
+    <section class="presentes-section">
+
+        
+
+        <div class="presentes-container">
+            <div id=central><div class="presentes-iniciais">Y ♥ J</div></div>
+            <h2 class="presentes-title">
+                Sua Presença é o Nosso Maior Presente
+            </h2>
+  
+            <div class="presentes-divider"></div>
+
+            <p class="presentes-text">
+                Mas se desejar nos presentear, preparamos uma lista especial com muito carinho.
+            </p>
+
+            <a href="presentes.html" class="presentes-button">ACESSAR LISTA</a>
+        </div>
+
+    </section>
+
+    <!-- Dress Code Section -->
+    <section class="dresscode">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Traje Sugerido</h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="dresscode-card">
+                <h3 class="dresscode-title">Dress Code</h3>
+                <p class="dresscode-text">
+                    Pedimos gentilmente que os convidados se sintam confortáveis com as vestimentas.
+                    <br><br>
+                    <strong>Homens:</strong> Esporte fino.
+                    <br>
+                    <strong>Mulheres:</strong> Vestido elegante, sofisticado e apropriado.
+                    <br><br>
+                    <span class="dresscode-warning">Por favor, evitem usar branco e verde oliva</span> — estas cores são
+                    reservadas para a
+                    noiva e suas madrinhas.
+                </p>
+
+
+            </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section id="cerimonia" class="venues">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Local</p>
+                <h2 class="section-title">Onde Celebraremos</h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="venues-grid">
+                <!-- Ceremony -->
+                <div class="venue-card">
+                    <div class="venue-image">
+                        <img src="img/santo_antonio.jpeg" alt="Local da Cerimônia">
+                        <div class="venue-image-overlay"></div>
+                        <div class="venue-image-text">
+                            <span class="venue-type">Cerimônia</span>
+                            <h3 class="venue-name">Paróquia Santo Antônio dos Bancários</h3>
+                        </div>
+                    </div>
+                    <div class="venue-details">
+                        <div class="venue-info">
+                            <i data-lucide="map-pin"></i>
+                            <p>Rua Salvador Tolezano, 194</p>
+                        </div>
+                        <div class="venue-info">
+                            <i data-lucide="clock"></i>
+                            <p>Horário: <strong>16:00</strong></p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Salvador+Tolezano+194
+                        +Parque+Mandaqui+São+Paulo"
+                            target="_blank" class="btn btn-secondary">
+                            <i data-lucide="map-pin"></i>
+                            Ver no Mapa
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reception -->
+                <div class="venue-card">
+                    <div class="venue-image">
+                        <img src="img/marion.jpeg" alt="Local da Festa">
+                        <div class="venue-image-overlay"></div>
+                        <div class="venue-image-text">
+                            <span class="venue-type">Festa</span>
+                            <h3 class="venue-name">Mansão Marion</h3>
+                        </div>
+                    </div>
+                    <div class="venue-details">
+                        <div class="venue-info">
+                            <i data-lucide="map-pin"></i>
+                            <p>Rua Curuçá, 711 - Vila Maria</p>
+                        </div>
+                        <div class="venue-info">
+                            <i data-lucide="clock"></i>
+                            <p>Horário: <strong>19:00</strong></p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Curuçá+771+Vila+Maria+São+Paulo"
+                            target="_blank" class="btn btn-secondary">
+                            <i data-lucide="map-pin"></i>
+                            Ver no Mapa
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- presenca Section -->
+    <section id="rsvp" class="rsvp">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Presença</p>
+                <h2 class="section-title">Confirme Sua Presença</h2>
+                <div class="decorative-line"></div>
+                <p class="section-description">
+                    Por favor, confirme sua presença até <strong>01 de setembro de 2026</strong>
+                </p>
+            </div>
+
+            <div class="rsvp-form-wrapper">
+                <form id="rsvp-form" class="rsvp-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Número de Convidados *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="1">1 pessoa</option>
+                            <option value="2">2 pessoas</option>
+                            <option value="3">3 pessoas</option>
+                            <option value="4">4 pessoas</option>
+                            <option value="5">5+ pessoas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">WhatsApp / Telefone *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem (opcional)</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Deixe uma mensagem para os noivos..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i data-lucide="send"></i>
+                        Confirmar Presença
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="rsvp-success" class="rsvp-success" style="display: none;">
+                    <div class="rsvp-success-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <h2 class="rsvp-success-title">Presença Confirmada!</h2>
+                    <p class="rsvp-success-text">
+                        Obrigado, <span id="confirmed-name"></span>!
+                        <br>
+                        Estamos muito felizes em saber que você estará conosco neste dia tão especial.
+                        <br><br>
+                        Mal podemos esperar para celebrar com você!
+                    </p>
+                    <div class="rsvp-success-footer">
+                        <i data-lucide="heart"></i>
+                        <span>Yasmin & Joanderson</span>
+                        <i data-lucide="heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-monogram">
+                <span>Y</span>
+                <i data-lucide="heart"></i>
+                <span>J</span>
+            </div>
+            <p class="footer-date">11 de Outubro de 2026</p>
+            <p class="footer-text">Estamos muito felizes em celebrar esse momento especial com você.</p>
+            <div class="decorative-line"></div>
+            <p class="footer-credit">
+                Feito com <i data-lucide="heart"></i> por Yasmin & Joanderson
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Button -->
+    <a href="#rsvp" class="floating-btn">
+        <i data-lucide="heart"></i>
+        <span>Confirmar Presença</span>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i data-lucide="check-circle"></i>
+        <span id="toast-message">Presença confirmada!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
